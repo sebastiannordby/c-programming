@@ -5,7 +5,6 @@ int get_line(char line[], int maxline);
 void copy(char to[], char from[]);
 
 int main() {
-
     int len, max = 0;
     char line[MAXLINE];
     char longest[MAXLINE];
@@ -26,19 +25,22 @@ int main() {
 }
 
 int get_line(char s[], int limit) {
-    int c, i;
+    int c, i, j = 0;
 
-    for(i = 0; i < limit - 1 && 
-        (c = getchar()) != EOF && c != '\n'; ++i ) {
-        s[i] = c;
+    for(i = 0; (c = getchar()) != EOF && c != '\n'; ++i ) {
+        if(i < limit - 2) {
+            s[j] = c;
+            j++;
+        }
     }
 
     if(c == '\n') {
-        s[i] = c;
+        s[j] = c;
         ++i;
+        ++j;
     }
 
-    s[i] = '\0';
+    s[j] = '\0';
 
     return i;
 }
