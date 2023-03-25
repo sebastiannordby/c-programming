@@ -1,3 +1,5 @@
+// Write a function, that can print how many times it has been called so far
+// without using a global variable
 #include <stdio.h>
 
 int count_func();
