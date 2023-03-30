@@ -1,0 +1,3 @@
+Read this as binary... Should be a byte array or byte stream?
+Oh yeah, C for the win, winning winning bin?
+We gone be allright
